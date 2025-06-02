@@ -26,3 +26,15 @@ export const createGoalSchema = goalsSchema.omit({
 });
 
 export type CreateGoalInterface = z.infer<typeof createGoalSchema>;
+
+export const updateGoalSchema = goalsSchema.omit({
+  title: true,
+  description: true,
+  deadline: true,
+  progress: true,
+  createdAt: true,
+  subgoals: true,
+  priority: true,
+});
+
+export type UpdateGoalInterface = z.infer<typeof updateGoalSchema>;

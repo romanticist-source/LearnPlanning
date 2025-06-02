@@ -1,7 +1,7 @@
 import { z } from "zod";
 
 export const usersSchema = z.object({
-  id: z.number(),
+  id: z.string(),
   name: z
     .string()
     .min(1)
@@ -14,14 +14,18 @@ export const usersSchema = z.object({
 });
 
 export const createUserSchema = usersSchema.omit({
-  id: true,
+  name: true,
+  email: true,
+  password: true,
   role: true,
 });
 
 export type CureateUserInterface = z.infer<typeof createUserSchema>;
 
 export const updateUserSchema = usersSchema.omit({
-  id: true,
+  name: true,
+  email: true,
+  password: true,
   role: true,
 });
 
