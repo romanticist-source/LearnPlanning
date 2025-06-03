@@ -1,7 +1,15 @@
-import Image from "next/image"
-import Link from "next/link"
-import { Button } from "@/components/ui/button"
-import { ArrowRight, Users, Target, Calendar, BarChart3, MessageSquare } from "lucide-react"
+import Image from "next/image";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import {
+  ArrowRight,
+  Users,
+  Target,
+  Calendar,
+  BarChart3,
+  MessageSquare,
+} from "lucide-react";
+import "@/styles/globals.css";
 
 export default function Home() {
   return (
@@ -29,14 +37,18 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div>
-              <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-6">グループで学習目標を達成しよう</h1>
+              <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-6">
+                グループで学習目標を達成しよう
+              </h1>
               <p className="text-lg text-gray-600 mb-8">
                 モチベーション維持と進捗管理を支援するプラットフォーム。
                 paizaとの連携で学習活動を可視化し、グループでの学習効果を最大化します。
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link href="/dashboard">
-                  <Button size="lg" className="bg-emerald-600 hover:bg-emerald-700">
+                  <Button
+                    size="lg"
+                    className="bg-emerald-600 hover:bg-emerald-700">
                     今すぐ始める
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>
@@ -101,11 +113,15 @@ export default function Home() {
       {/* アピールポイントセクション */}
       <section className="py-16 bg-emerald-50">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12">アピールポイント</h2>
+          <h2 className="text-3xl font-bold text-center mb-12">
+            アピールポイント
+          </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="bg-white p-6 rounded-lg shadow-sm">
               <h3 className="text-xl font-semibold mb-4">モチベーション向上</h3>
-              <p>グループで共に学習することで、孤独感を解消し、モチベーションを高く維持できます。</p>
+              <p>
+                グループで共に学習することで、孤独感を解消し、モチベーションを高く維持できます。
+              </p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm">
               <h3 className="text-xl font-semibold mb-4">進捗の可視化</h3>
@@ -121,7 +137,9 @@ export default function Home() {
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm">
               <h3 className="text-xl font-semibold mb-4">学習効果の向上</h3>
-              <p>質疑応答機能を通じて、疑問点をすぐに解決し、理解を深めることができます。</p>
+              <p>
+                質疑応答機能を通じて、疑問点をすぐに解決し、理解を深めることができます。
+              </p>
             </div>
           </div>
         </div>
@@ -199,12 +217,14 @@ export default function Home() {
             </div>
           </div>
           <div className="border-t border-gray-800 mt-8 pt-8 text-center md:text-left">
-            <p className="text-gray-400">© 2025 Learn Planning. All rights reserved.</p>
+            <p className="text-gray-400">
+              © 2025 Learn Planning. All rights reserved.
+            </p>
           </div>
         </div>
       </footer>
     </div>
-  )
+  );
 }
 
 function FeatureCard({ icon, title, description }) {
@@ -214,5 +234,5 @@ function FeatureCard({ icon, title, description }) {
       <h3 className="text-xl font-semibold mb-2">{title}</h3>
       <p className="text-gray-600">{description}</p>
     </div>
-  )
+  );
 }
